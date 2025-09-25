@@ -3,9 +3,12 @@ const fileInput = document.getElementById("fileInput");
 const selectedFileDiv = document.getElementById("selectedFileDiv");
 const uploadBtn = document.getElementById("uploadBtn");
 const cancelBtn = document.getElementById("cancelBtn");
+const progressContainer = document.getElementById("progressContainer");
+const progressFill = document.getElementById("progressFill");
+const progressText = document.getElementById("progressText");
 
 let selectedFile = null;
-let uploadController = null;
+let uploadController = null; // : AbortController
 
 // انتخاب فایل
 fileInput.addEventListener("change", function (e) {
@@ -111,7 +114,7 @@ async function uploadWithProgress() {
       headers: {
         "Content-Type": "multipart/form-data",
       },
-      onUploadProgress: function (progressEvent) {
+      onUploadProgress: (progressEvent) => {
         if (progressEvent.event.lengthComputable) {
           const percentage = Math.round(
             (progressEvent.loaded / progressEvent.total) * 100

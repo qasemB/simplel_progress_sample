@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>آپلود فایل با پراگرس بار</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="upload-container">
+      <h1 class="title">آپلود فایل</h1>
+
+      <input type="file" id="fileInput" class="file-input" />
+
+      <div class="selected-file" id="selectedFileDiv"></div>
+
+      <div class="progress-container" id="progressContainer">
+        <div class="progress-text" id="progressText">آماده برای آپلود...</div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <button class="upload-btn" id="uploadBtn" disabled>آپلود فایل</button>
+
+      <button class="cancel-btn" id="cancelBtn">لغو</button>
+
+      <div class="result" id="result"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

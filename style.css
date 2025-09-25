@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.upload-container {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.title {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.file-input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background: #f9f9f9;
+}
+
+.file-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.progress-container {
+  margin: 20px 0;
+  display: none;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #45a049);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.upload-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease;
+}
+
+.upload-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.upload-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cancel-btn {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: none;
+}
+
+.cancel-btn:hover {
+  background: #ff5252;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  display: none;
+}
+
+.result.success {
+  background: #e8f5e8;
+  border: 1px solid #4caf50;
+  color: #2e7d32;
+}
+
+.result.error {
+  background: #ffebee;
+  border: 1px solid #f44336;
+  color: #c62828;
+}
+
+.selected-file {
+  background: #f0f8ff;
+  border: 1px solid #667eea;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 15px 0;
+  font-size: 14px;
+  color: #333;
+  display: none;
+}
